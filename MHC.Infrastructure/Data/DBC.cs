@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using MHC.Infrastructure.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MHC.Domain.Entities;
 
 namespace MHC.Infrastructure.Data;
 
