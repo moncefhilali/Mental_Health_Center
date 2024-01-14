@@ -1,11 +1,13 @@
+using MHC.API;
+using MHC.Application;
 using MHC.Infrastructure;
-using MHC.Infrastructure.Data;
-using MHC.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDependecyInjectionInfrastructure();
+builder.Services.AddDependecyInjectionApplication();
+builder.Services.AddDependecyInjectionAPI();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
