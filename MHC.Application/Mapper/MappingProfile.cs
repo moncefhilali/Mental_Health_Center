@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using MHC.Application.Clinics.ViewModel;
+using MHC.Application.Services.ViewModel;
+using MHC.Application.Treatments.ViewModel;
+using MHC.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +15,9 @@ namespace MHC.Application.Mapper
     {
         public MappingProfile() 
         { 
-            // Pofiles
+            CreateMap<Treatment, TreatmentViewModel>().ReverseMap();
+            CreateMap<Service, ServiceViewModel>().ReverseMap();
+            CreateMap<Clinic, ClinicViewModel>().ReverseMap();
         }
     }
 }

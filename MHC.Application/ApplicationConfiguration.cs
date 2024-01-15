@@ -7,13 +7,7 @@ namespace MHC.Application
     {
         public static IServiceCollection AddDependecyInjectionApplication(this IServiceCollection services)
         {
-            //// MediatR
-            //services.AddMediatR(typeof(GetAllUtilisateurQuery));
-            //services.AddMediatR(typeof(CreateUtilisateurCommand));
-            //services.AddMediatR(typeof(GetAllRoleQuery));
-            //services.AddMediatR(typeof(CreateRoleCommand));
-            //services.AddMediatR(typeof(GetAllUtilisateurRoleQuery));
-            //services.AddMediatR(typeof(CreateUtilisateurRoleCommand));
+            // MediatR
 
             // Mapper
             services.AddAutoMapper(typeof(MappingProfile));
