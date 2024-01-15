@@ -5,7 +5,7 @@ using MHC.Domain.Interfaces;
 
 namespace MHC.Application.Clinics.Queries
 {
-    public class GetAllClinicsQueryHandler : IRequestHandler<GetAllClinicsQueries, List<ClinicViewModel>>
+    public class GetAllClinicsQueryHandler : IRequestHandler<GetAllClinicsQuery, List<ClinicViewModel>>
     {
         private readonly IClinicRepository _repository;
         private readonly IMapper _mapper;
@@ -15,7 +15,7 @@ namespace MHC.Application.Clinics.Queries
             _mapper = mapper;
         }
 
-        public async Task<List<ClinicViewModel>> Handle(GetAllClinicsQueries request, CancellationToken cancellationToken)
+        public async Task<List<ClinicViewModel>> Handle(GetAllClinicsQuery request, CancellationToken cancellationToken)
         {
             var clinics = await _repository.GetAllAsync();
             return _mapper.Map<List<ClinicViewModel>>(clinics);
