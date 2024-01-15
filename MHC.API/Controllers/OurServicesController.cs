@@ -1,15 +1,15 @@
 ﻿using MediatR;
-using MHC.Application.Services.Queries;
+using MHC.Application.OurServices.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MHC.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ServicesController : ControllerBase
+    public class OurServicesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ServicesController(IMediator mediator)
+        public OurServicesController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -17,7 +17,7 @@ namespace MHC.API.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAllServices()
         {
-            var result = await _mediator.Send(new GetAllServicesQuery());
+            var result = await _mediator.Send(new GetAllOurServicesQuery());
             return Ok(result);
         }
     }

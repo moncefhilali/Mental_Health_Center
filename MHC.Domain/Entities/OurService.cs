@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MHC.Domain.Entities;
 
-public partial class Service
+public partial class OurService
 {
     public Guid Id { get; set; }
 
