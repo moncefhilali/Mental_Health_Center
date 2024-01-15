@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MHC.Application.Mapper;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MHC.Application
 {
@@ -14,8 +15,8 @@ namespace MHC.Application
             //services.AddMediatR(typeof(GetAllUtilisateurRoleQuery));
             //services.AddMediatR(typeof(CreateUtilisateurRoleCommand));
 
-            //// Mapper
-            //services.AddAutoMapper(typeof(MappingProfile));
+            // Mapper
+            services.AddAutoMapper(typeof(MappingProfile));
 
             return services;
         }
