@@ -5,6 +5,6 @@ namespace MHC.Application.Treatments.Queries
 {
     public class GetAllTreatmentsQuery : IRequest<List<TreatmentViewModel>>
     {
-
+        
     }
 }
