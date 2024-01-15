@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MHC.Application.Clinics.Queries;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MHC.API.Controllers
@@ -13,6 +12,13 @@ namespace MHC.API.Controllers
         public ClinicsController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetAllClinics()
+        {
+            var result = await _mediator.Send(new GetAllClinicsQuery());
+            return Ok(result);
         }
     }
 }
