@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MHC.Infrastructure.Entities;
+namespace MHC.Domain.Entities;
 
 public partial class ClinicType
 {

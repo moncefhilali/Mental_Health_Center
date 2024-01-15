@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MHC.Infrastructure.Entities;
+namespace MHC.Domain.Entities;
 
-public partial class Clinic
+public partial class Service
 {
     public Guid Id { get; set; }
 
     public string? Name { get; set; }
 
-    public string? Status { get; set; }
-
     public double? Reviews { get; set; }
 
-    public string? Link { get; set; }
+    public int? TotalEnrollment { get; set; }
+
+    public DateTime? StartDate { get; set; }
+
+    public Guid? IdCategory { get; set; }
 
     public Guid? IdImage { get; set; }
 
-    public Guid? IdType { get; set; }
+    public virtual Category? IdCategoryNavigation { get; set; }
 
     public virtual Image? IdImageNavigation { get; set; }
-
-    public virtual ClinicType? IdTypeNavigation { get; set; }
 }

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MHC.Application\MHC.Application.csproj" />
     <ProjectReference Include="..\MHC.Infrastructure\MHC.Infrastructure.csproj" />
   </ItemGroup>
 

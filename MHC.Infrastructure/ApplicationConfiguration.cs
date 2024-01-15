@@ -1,5 +1,6 @@
 ﻿using MHC.Infrastructure.Data;
 using MHC.Infrastructure.Repositories;
+using MHC.Domain.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MHC.Infrastructure
