@@ -4,9 +4,9 @@ using MHC.Infrastructure.Data;
 
 namespace MHC.Infrastructure.Repositories
 {
-    public class ServiceRepository : GenericRepository<Service>, IServiceRepository
+    public class OurServiceRepository : GenericRepository<OurService>, IOurServiceRepository
     {
-        public ServiceRepository(DBC dbc) : base(dbc) { }
+        public OurServiceRepository(DBC dbc) : base(dbc) { }
 
         // Additional Methods
     }

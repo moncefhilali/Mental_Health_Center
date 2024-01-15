@@ -2,7 +2,7 @@
 
 namespace MHC.Domain.Interfaces
 {
-    public interface IServiceRepository : IGenericRepository<Service>
+    public interface IOurServiceRepository : IGenericRepository<OurService>
     {
         // Additional Methods
     }

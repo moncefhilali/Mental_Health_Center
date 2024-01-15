@@ -13,7 +13,7 @@ public partial class Image
 
     public virtual ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
 
-    public virtual ICollection<Service> Services { get; set; } = new List<Service>();
+    public virtual ICollection<OurService> Services { get; set; } = new List<OurService>();
 
     public virtual ICollection<Treatment> Treatments { get; set; } = new List<Treatment>();
 }

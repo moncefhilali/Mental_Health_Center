@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using MHC.Application.Clinics.Queries;
 using MHC.Application.Mapper;
-using MHC.Application.Services.Queries;
+using MHC.Application.OurServices.Queries;
 using MHC.Application.Treatments.Queries;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +13,7 @@ namespace MHC.Application
         {
             // MediatR
             services.AddMediatR(typeof(GetAllClinicsQuery));
-            services.AddMediatR(typeof(GetAllServicesQuery));
+            services.AddMediatR(typeof(GetAllOurServicesQuery));
             services.AddMediatR(typeof(GetAllTreatmentsQuery));
 
             // Mapper

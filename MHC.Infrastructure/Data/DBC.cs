@@ -22,7 +22,7 @@ public partial class DBC : DbContext
 
     public virtual DbSet<Image> Images { get; set; }
 
-    public virtual DbSet<Service> Services { get; set; }
+    public virtual DbSet<OurService> Services { get; set; }
 
     public virtual DbSet<Treatment> Treatments { get; set; }
 
@@ -106,11 +106,11 @@ public partial class DBC : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Service>(entity =>
+        modelBuilder.Entity<OurService>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("pk_Service");
 
-            entity.ToTable("Service");
+            entity.ToTable("OurService");
 
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Name)

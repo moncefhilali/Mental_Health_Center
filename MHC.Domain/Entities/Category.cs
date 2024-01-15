@@ -9,5 +9,5 @@ public partial class Category
 
     public string? Name { get; set; }
 
-    public virtual ICollection<Service> Services { get; set; } = new List<Service>();
+    public virtual ICollection<OurService> Services { get; set; } = new List<OurService>();
 }

@@ -1,8 +1,8 @@
 ﻿using MHC.Domain.Entities;
 
-namespace MHC.Application.Services.ViewModel
+namespace MHC.Application.OurServices.ViewModel
 {
-    public class ServiceViewModel
+    public class OurServiceViewModel
     {
         public string? Name { get; set; }
 
