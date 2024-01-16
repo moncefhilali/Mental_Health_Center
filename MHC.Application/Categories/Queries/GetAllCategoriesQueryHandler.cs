@@ -2,11 +2,6 @@
 using MediatR;
 using MHC.Application.Categories.ViewModel;
 using MHC.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MHC.Application.Categories.Queries
 {
