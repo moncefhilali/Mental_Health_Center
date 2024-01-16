@@ -11,9 +11,13 @@ namespace MHC.Infrastructure
         {
             // Repositories
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<ITreatmentRepository, TreatmentRepository>();
             services.AddScoped<IOurServiceRepository, OurServiceRepository>();
+            services.AddScoped<IClinicTypeRepository, ClinicTypeRepository>();
+            services.AddScoped<ITreatmentRepository, TreatmentRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
             services.AddScoped<IClinicRepository, ClinicReository>();
+            services.AddScoped<IImageRepository, ImageRepository>();
 
             // DbContext
             services.AddScoped<DBC>();
