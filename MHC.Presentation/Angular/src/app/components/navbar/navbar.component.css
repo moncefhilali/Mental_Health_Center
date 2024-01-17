@@ -8,19 +8,35 @@ input {
   justify-content: space-around;
   width: 70%;
   height: 100px;
-  border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.Navbar-Logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .Navbar-Links a {
   text-decoration: none;
-  color: #261839;
+  color: #4e3472;
   font-size: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
   font-weight: 600;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.Navbar-Links a:hover {
+  color: white;
+  background-color: #4e3472;
 }
 
 .Navbar-Button input {
@@ -29,8 +45,31 @@ input {
   font-family: "Poppins";
   font-weight: 600;
   border-radius: 50px;
-  border-color: #261839;
+  border-color: #4e3472;
   width: 150px;
   height: 50px;
-  background-color: #261839;
+  background-color: #4e3472;
+  cursor: pointer;
+}
+
+.Navbar-Button input:hover {
+  background-color: #382552;
+  transition: all 0.5s;
+}
+
+.Logo-Icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.Logo-Icon img {
+  width: 50px;
+  height: auto;
+}
+
+.Logo-Text p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4e3472;
 }
