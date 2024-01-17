@@ -1,0 +1,46 @@
+.Treatment-Container {
+  display: flex;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Treatment {
+  width: 400px;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.Treatment-Details {
+  padding: 20px;
+}
+
+.Treatment-Image {
+  height: 200px;
+}
+
+.Treatment-Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.Treatment-Date,
+.Treatment-Text,
+.Treatment-Title {
+  color: #4e3472;
+}
+
+.Treatment-Text {
+  font-weight: 600;
+  text-align: justify;
+}
+
+.Treatment-Date {
+  text-align: right;
+  font-weight: 700;
+  margin-bottom: 0;
+}
