@@ -7,10 +7,20 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { TreatmentComponent } from './components/treatment/treatment.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { FormsModule } from '@angular/forms';
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavbarComponent, IntroductionComponent, TreatmentComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    NavbarComponent,
+    IntroductionComponent,
+    TreatmentComponent,
+    ServiceCardComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, RatingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
