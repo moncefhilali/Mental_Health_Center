@@ -17,8 +17,12 @@
   padding: 20px;
 }
 
-.Treatment-Image {
+.Treatment-Upper {
   height: 200px;
+}
+
+.Treatment-Image {
+  height: 100%;
 }
 
 .Treatment-Image img {
@@ -26,6 +30,25 @@
   height: 100%;
   object-fit: cover;
   object-position: 100% 0;
+}
+
+.Treatment-Doctor,
+.Treatment-Doctor img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.Treatment-Doctor {
+  box-shadow: 0px 5px 10px gray;
+  position: relative;
+  float: right;
+  bottom: 35px;
+  right: 30px;
+}
+
+.Treatment-Doctor img {
+  object-fit: cover;
 }
 
 .Treatment-Date,
