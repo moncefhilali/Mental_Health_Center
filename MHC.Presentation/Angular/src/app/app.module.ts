@@ -10,6 +10,9 @@ import { TreatmentComponent } from './components/treatment/treatment.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { FormsModule } from '@angular/forms';
 import { RatingModule } from 'primeng/rating';
+import { ClinicComponent } from './components/clinic/clinic.component';
+import { DataViewModule } from 'primeng/dataview';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,15 @@ import { RatingModule } from 'primeng/rating';
     IntroductionComponent,
     TreatmentComponent,
     ServiceCardComponent,
+    ClinicComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RatingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RatingModule,
+    DataViewModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
