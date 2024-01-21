@@ -2,31 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { IntroductionComponent } from './treatments/components/introduction/introduction.component';
-import { TreatmentComponent } from './treatments/components/treatment/treatment.component';
-import { ServiceCardComponent } from './our-services/components/service-card/service-card.component';
 import { FormsModule } from '@angular/forms';
 import { RatingModule } from 'primeng/rating';
-import { ClinicComponent } from './clinics/components/clinic/clinic.component';
 import { DataViewModule } from 'primeng/dataview';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { TreatmentsPageModule } from './treatments/treatments-page.module';
 
 @NgModule({
-  declarations: [
-    NavbarComponent,
-    IntroductionComponent,
-    TreatmentComponent,
-    ServiceCardComponent,
-    ClinicComponent,
-  ],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RatingModule,
     DataViewModule,
+    TreatmentsPageModule,
   ],
   providers: [],
-  bootstrap: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
