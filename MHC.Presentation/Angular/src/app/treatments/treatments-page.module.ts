@@ -10,7 +10,6 @@ import { HeaderComponent } from '../shared/header/header.component';
     TreatmentsPageComponent,
     IntroductionComponent,
     TreatmentComponent,
-    HeaderComponent,
   ],
   imports: [CommonModule],
 })
