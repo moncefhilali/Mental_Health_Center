@@ -8,6 +8,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TreatmentsPageModule } from './treatments/treatments-page.module';
+import { OurServicesPageModule } from './our-services/our-services-page.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -18,6 +19,7 @@ import { TreatmentsPageModule } from './treatments/treatments-page.module';
     RatingModule,
     DataViewModule,
     TreatmentsPageModule,
+    OurServicesPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
