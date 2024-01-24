@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TreatmentsPageModule } from './treatments/treatments-page.module';
 import { OurServicesPageModule } from './our-services/our-services-page.module';
-import { MyStandaloneComponentComponent } from './shared/my-standalone-component/my-standalone-component.component';
 import { ClinicsPageModule } from './clinics/clinics-page.module';
 
 @NgModule({
