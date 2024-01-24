@@ -1,4 +1,5 @@
-﻿using MHC.Domain.Entities;
+﻿using MHC.Application.Doctors.ViewModel;
+using MHC.Application.Images.ViewModel;
 
 namespace MHC.Application.Treatments.ViewModel
 {
@@ -10,12 +11,8 @@ namespace MHC.Application.Treatments.ViewModel
 
         public DateTime? CreatedAt { get; set; }
 
-        public Guid? IdImage { get; set; }
+        public virtual DoctorViewModel? Doctor { get; set; }
 
-        public Guid? IdDoctor { get; set; }
-
-        public virtual Doctor? IdDoctorNavigation { get; set; }
-
-        public virtual Image? IdImageNavigation { get; set; }
+        public virtual ImageViewModel? Image { get; set; }
     }
 }

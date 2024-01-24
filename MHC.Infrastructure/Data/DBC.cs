@@ -89,7 +89,7 @@ public partial class DBC : DbContext
                 .HasMaxLength(150)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Doctors)
+            entity.HasOne(d => d.Image).WithMany(p => p.Doctors)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Doctor");
         });
@@ -142,11 +142,11 @@ public partial class DBC : DbContext
                 .HasMaxLength(150)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdDoctorNavigation).WithMany(p => p.Treatments)
+            entity.HasOne(d => d.Doctor).WithMany(p => p.Treatments)
                 .HasForeignKey(d => d.IdDoctor)
                 .HasConstraintName("fk_Doctor_Treatment");
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Treatments)
+            entity.HasOne(d => d.Image).WithMany(p => p.Treatments)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Treatment");
         });

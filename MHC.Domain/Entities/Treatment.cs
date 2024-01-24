@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MHC.Domain.Entities;
 
@@ -17,7 +18,7 @@ public partial class Treatment
 
     public Guid? IdDoctor { get; set; }
 
-    public virtual Doctor? IdDoctorNavigation { get; set; }
+    public virtual Doctor? Doctor { get; set; }
 
-    public virtual Image? IdImageNavigation { get; set; }
+    public virtual Image? Image { get; set; }
 }

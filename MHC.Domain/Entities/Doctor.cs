@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MHC.Domain.Entities;
 
@@ -15,7 +16,8 @@ public partial class Doctor
 
     public Guid? IdImage { get; set; }
 
-    public virtual Image? IdImageNavigation { get; set; }
+    public virtual Image? Image { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Treatment> Treatments { get; set; } = new List<Treatment>();
 }
