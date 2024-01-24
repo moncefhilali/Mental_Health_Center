@@ -11,6 +11,6 @@ import { HeaderComponent } from '../shared/header/header.component';
     IntroductionComponent,
     TreatmentComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
 })
 export class TreatmentsPageModule {}

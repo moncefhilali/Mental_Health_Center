@@ -7,11 +7,7 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
 import { HeaderComponent } from '../shared/header/header.component';
 
 @NgModule({
-  declarations: [
-    OurServicesPageComponent,
-    ServiceCardComponent,
-    HeaderComponent,
-  ],
-  imports: [CommonModule, FormsModule, RatingModule],
+  declarations: [OurServicesPageComponent, ServiceCardComponent],
+  imports: [CommonModule, HeaderComponent, FormsModule, RatingModule],
 })
 export class OurServicesPageModule {}
