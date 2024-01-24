@@ -6,7 +6,7 @@
 
 .Service-Category h1 {
   color: #4e3472;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -21,10 +21,10 @@
 
 .Service-Card {
   margin-right: 40px;
-  width: 300px;
+  width: 250px;
   border-radius: 15px;
   background-color: white;
-  border: 3px solid rgb(199, 199, 199);
+  border: 2px solid rgb(199, 199, 199);
   transition: all 0.5s;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .Service-Image {
-  height: 200px;
+  height: 180px;
 }
 
 .Service-Image img {
@@ -56,11 +56,13 @@
   margin-top: 0px;
   margin-bottom: 12px;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .Service-Enrollment p {
   margin-top: 12px;
   margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .Service-Title h2,
@@ -72,8 +74,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 155px;
-  height: 65px;
+  width: 130px;
+  height: 55px;
   background-color: #3b82f6;
   margin-left: auto;
   margin-right: auto;
@@ -101,9 +103,9 @@
 }
 
 .Service-Card #service-enroll {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .Service-Card #service-date {
-  font-size: 16px;
+  font-size: 14px;
 }
