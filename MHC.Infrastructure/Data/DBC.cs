@@ -22,7 +22,7 @@ public partial class DBC : DbContext
 
     public virtual DbSet<Image> Images { get; set; }
 
-    public virtual DbSet<OurService> Services { get; set; }
+    public virtual DbSet<OurService> OurServices { get; set; }
 
     public virtual DbSet<Treatment> Treatments { get; set; }
 
@@ -118,11 +118,11 @@ public partial class DBC : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.StartDate).HasColumnType("date");
 
-            entity.HasOne(d => d.IdCategoryNavigation).WithMany(p => p.Services)
+            entity.HasOne(d => d.Category).WithMany(p => p.Services)
                 .HasForeignKey(d => d.IdCategory)
                 .HasConstraintName("fk_Category_Service");
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Services)
+            entity.HasOne(d => d.Image).WithMany(p => p.Services)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Service");
         });

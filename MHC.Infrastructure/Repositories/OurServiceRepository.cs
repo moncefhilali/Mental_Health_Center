@@ -1,13 +1,20 @@
 ﻿using MHC.Domain.Entities;
 using MHC.Domain.Interfaces;
 using MHC.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MHC.Infrastructure.Repositories
 {
     public class OurServiceRepository : GenericRepository<OurService>, IOurServiceRepository
     {
-        public OurServiceRepository(DBC dbc) : base(dbc) { }
+        private readonly DBC _context;
+        public OurServiceRepository(DBC dbc) : base(dbc) => _context = dbc;
 
-        // Additional Methods
+        public async Task<List<OurService>> GetAllIncludeServices()
+        {
+            return await _context.OurServices
+                .Include(s => s.Category)
+                .ToListAsync();
+        }
     }
 }

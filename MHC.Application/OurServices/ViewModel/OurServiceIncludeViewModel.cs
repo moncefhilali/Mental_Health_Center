@@ -1,10 +1,9 @@
 ﻿using MHC.Application.Categories.ViewModel;
 using MHC.Application.Images.ViewModel;
-using MHC.Domain.Entities;
 
 namespace MHC.Application.OurServices.ViewModel
 {
-    public class OurServiceViewModel
+    public class OurServiceIncludeViewModel
     {
         public string? Name { get; set; }
 
@@ -13,5 +12,9 @@ namespace MHC.Application.OurServices.ViewModel
         public int? TotalEnrollment { get; set; }
 
         public DateTime? StartDate { get; set; }
+
+        public virtual CategoryViewModel? Category { get; set; }
+
+        public virtual ImageViewModel? Image { get; set; }
     }
 }
