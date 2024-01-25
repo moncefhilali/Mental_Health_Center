@@ -2,11 +2,11 @@
 using MHC.Application.Clinics.Queries;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MHC.API.Controllers.v1
+namespace MHC.API.Controllers.v2
 {
     [Route("api/[controller]")]
     [ApiController]
-    [ApiVersion("1.0", Deprecated = true)]
+    [ApiVersion("2.0")]
     public class ClinicsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -18,7 +18,7 @@ namespace MHC.API.Controllers.v1
         [HttpGet]
         public async Task<ActionResult> GetAllClinics()
         {
-            var result = await _mediator.Send(new GetAllClinicsQuery());
+            var result = await _mediator.Send(new GetAllIncludeClinicsQuery());
             return Ok(result);
         }
     }

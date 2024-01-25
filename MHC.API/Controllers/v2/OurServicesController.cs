@@ -2,11 +2,11 @@
 using MHC.Application.OurServices.Queries;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MHC.API.Controllers.v1
+namespace MHC.API.Controllers.v2
 {
     [Route("api/[controller]")]
     [ApiController]
-    [ApiVersion("1.0", Deprecated = true)]
+    [ApiVersion("2.0")]
     public class OurServicesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -18,7 +18,7 @@ namespace MHC.API.Controllers.v1
         [HttpGet]
         public async Task<ActionResult> GetAllServices()
         {
-            var result = await _mediator.Send(new GetAllOurServicesQuery());
+            var result = await _mediator.Send(new GetAllIncludeOurServicesQuery());
             return Ok(result);
         }
     }
