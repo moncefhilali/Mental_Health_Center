@@ -23,6 +23,7 @@ namespace MHC.Application.Mapper
             CreateMap<Image, ImageViewModel>().ReverseMap();
             
             CreateMap<OurService, OurServiceIncludeViewModel>().ReverseMap();
+            CreateMap<Treatment, TreatmentIncludeViewModel>().ReverseMap();
         }
     }
 }

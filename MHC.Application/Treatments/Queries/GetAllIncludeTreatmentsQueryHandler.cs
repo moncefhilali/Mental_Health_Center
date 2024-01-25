@@ -5,7 +5,7 @@ using MHC.Domain.Interfaces;
 
 namespace MHC.Application.Treatments.Queries
 {
-    public class GetAllIncludeTreatmentsQueryHandler : IRequestHandler<GetAllIncludeTreatmentsQuery, List<TreatmentViewModel>>
+    public class GetAllIncludeTreatmentsQueryHandler : IRequestHandler<GetAllIncludeTreatmentsQuery, List<TreatmentIncludeViewModel>>
     {
         private readonly ITreatmentRepository _repository;
         private readonly IMapper _mapper;
@@ -15,10 +15,10 @@ namespace MHC.Application.Treatments.Queries
             _mapper = mapper;
         }
 
-        public async Task<List<TreatmentViewModel>> Handle(GetAllIncludeTreatmentsQuery request, CancellationToken cancellationToken)
+        public async Task<List<TreatmentIncludeViewModel>> Handle(GetAllIncludeTreatmentsQuery request, CancellationToken cancellationToken)
         {
             var treatments = await _repository.GetAllIncludeAsync();
-            return _mapper.Map<List<TreatmentViewModel>>(treatments);
+            return _mapper.Map<List<TreatmentIncludeViewModel>>(treatments);
         }
     }
 }

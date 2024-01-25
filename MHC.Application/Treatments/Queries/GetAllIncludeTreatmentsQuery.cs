@@ -3,7 +3,7 @@ using MHC.Application.Treatments.ViewModel;
 
 namespace MHC.Application.Treatments.Queries
 {
-    public class GetAllIncludeTreatmentsQuery : IRequest<List<TreatmentViewModel>>
+    public class GetAllIncludeTreatmentsQuery : IRequest<List<TreatmentIncludeViewModel>>
     {
     }
 }
