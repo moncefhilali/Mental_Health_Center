@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Versioning;
+using Polly;
 
 namespace MHC.API
 {
@@ -20,6 +21,12 @@ namespace MHC.API
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
             });
+
+            // Polly
+            var retryPolicy = Policy
+                   .Handle<Exception>()
+                   .RetryAsync(5);
+            services.AddSingleton(retryPolicy);
 
             // HttpClient
             services.AddHttpClient();
