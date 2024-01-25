@@ -10,7 +10,7 @@ namespace MHC.Infrastructure.Repositories
         private readonly DBC _context;
         public OurServiceRepository(DBC dbc) : base(dbc) => _context = dbc;
 
-        public async Task<List<OurService>> GetAllIncludeServices()
+        public async Task<List<OurService>> GetAllIncludeAsync()
         {
             return await _context.OurServices
                 .Include(s => s.Category)

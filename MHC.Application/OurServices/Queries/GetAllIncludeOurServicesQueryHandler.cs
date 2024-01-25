@@ -17,7 +17,7 @@ namespace MHC.Application.OurServices.Queries
 
         public async Task<List<OurServiceIncludeViewModel>> Handle(GetAllIncludeOurServicesQuery request, CancellationToken cancellationToken)
         {
-            var services = await _repository.GetAllIncludeServices();
+            var services = await _repository.GetAllIncludeAsync();
             return _mapper.Map<List<OurServiceIncludeViewModel>>(services);
         }
     }

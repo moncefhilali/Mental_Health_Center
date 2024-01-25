@@ -19,7 +19,7 @@ public partial class Clinic
 
     public Guid? IdType { get; set; }
 
-    public virtual Image? IdImageNavigation { get; set; }
+    public virtual Image? Image { get; set; }
 
-    public virtual ClinicType? IdTypeNavigation { get; set; }
+    public virtual ClinicType? ClinicType { get; set; }
 }

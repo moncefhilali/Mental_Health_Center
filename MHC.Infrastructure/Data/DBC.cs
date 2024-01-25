@@ -63,11 +63,11 @@ public partial class DBC : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Clinics)
+            entity.HasOne(d => d.Image).WithMany(p => p.Clinics)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Clinic");
 
-            entity.HasOne(d => d.IdTypeNavigation).WithMany(p => p.Clinics)
+            entity.HasOne(d => d.ClinicType).WithMany(p => p.Clinics)
                 .HasForeignKey(d => d.IdType)
                 .HasConstraintName("fk_Type_Clinic");
         });

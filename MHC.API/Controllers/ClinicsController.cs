@@ -20,5 +20,12 @@ namespace MHC.API.Controllers
             var result = await _mediator.Send(new GetAllClinicsQuery());
             return Ok(result);
         }
+
+        [HttpGet("Include")]
+        public async Task<ActionResult> GetAllIncludeClinics()
+        {
+            var result = await _mediator.Send(new GetAllIncludeClinicsQuery());
+            return Ok(result);
+        }
     }
 }
