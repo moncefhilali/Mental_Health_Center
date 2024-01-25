@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MHC.Infrastructure", "MHC.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MHC.API", "MHC.API\MHC.API.csproj", "{3027F533-FD63-4F18-BE7F-93A86273B7B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHC.Presentation", "MHC.Presentation\MHC.Presentation.csproj", "{E2AC21FC-B770-4C31-BFC8-9E0631996D8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MHC.Presentation", "MHC.Presentation\MHC.Presentation.csproj", "{E2AC21FC-B770-4C31-BFC8-9E0631996D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHC.UnitTests", "MHC.UnitTests\MHC.UnitTests.csproj", "{EEE56F1E-1B78-4F72-8FBA-30D3764E0D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E2AC21FC-B770-4C31-BFC8-9E0631996D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2AC21FC-B770-4C31-BFC8-9E0631996D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2AC21FC-B770-4C31-BFC8-9E0631996D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE56F1E-1B78-4F72-8FBA-30D3764E0D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE56F1E-1B78-4F72-8FBA-30D3764E0D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE56F1E-1B78-4F72-8FBA-30D3764E0D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE56F1E-1B78-4F72-8FBA-30D3764E0D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
