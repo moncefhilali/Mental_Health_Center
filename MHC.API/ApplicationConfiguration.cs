@@ -1,5 +1,6 @@
 ﻿using MHC.API.Health;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.RateLimiting;
 using Polly;
 
 namespace MHC.API
@@ -21,6 +22,18 @@ namespace MHC.API
             {
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
+            });
+
+            // Rate Limiter
+            services.AddRateLimiter(options =>
+            {
+                options.AddFixedWindowLimiter("FixedWindowPolicy", opt =>
+                {
+                    opt.Window = TimeSpan.FromSeconds(10);
+                    opt.PermitLimit = 1;
+                    opt.QueueLimit = 1;
+                    opt.QueueProcessingOrder = System.Threading.RateLimiting.QueueProcessingOrder.OldestFirst;
+                }).RejectionStatusCode = 429;
             });
 
             // Health Check
