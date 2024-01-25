@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Versioning;
+﻿using MHC.API.Health;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Polly;
 
 namespace MHC.API
@@ -21,6 +22,11 @@ namespace MHC.API
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
             });
+
+            // Health Check
+            services.AddHealthChecks()
+                .AddCheck<DatabaseHealthCheck>("Database")
+                .AddCheck<MyJsonHealthCheck>("MyJSON API");
 
             // Polly
             var retryPolicy = Policy
