@@ -21,6 +21,9 @@ namespace MHC.API
                 options.SubstituteApiVersionInUrl = true;
             });
 
+            // HttpClient
+            services.AddHttpClient();
+
             return services;
         }
     }
