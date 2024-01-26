@@ -10,6 +10,6 @@ public partial class Category
 
     public string? Name { get; set; }
 
-    [JsonIgnore]
+    //[JsonIgnore]
     public virtual ICollection<OurService> Services { get; set; } = new List<OurService>();
 }
