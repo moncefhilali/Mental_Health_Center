@@ -8,24 +8,27 @@
   color: #4e3472;
   font-size: 25px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 .Service-Container {
   display: flex;
   width: 80%;
-  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .Service-Card {
   margin-right: 40px;
-  width: 250px;
+  width: 225px;
   border-radius: 15px;
   background-color: white;
   border: 2px solid rgb(199, 199, 199);
   transition: all 0.5s;
+  margin-top: 40px;
 }
 
 .Service-Card:hover {
