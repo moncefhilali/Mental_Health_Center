@@ -1,14 +1,12 @@
 using AutoFixture;
 using MediatR;
 using MHC.API.Controllers.v1;
-using MHC.Application.Categories.Queries;
 using MHC.Application.Treatments.Queries;
 using MHC.Application.Treatments.ViewModel;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace MHC.UnitTests
+namespace MHC.UnitTests.Controllers
 {
     public class TreatmentsControllerTests
     {
