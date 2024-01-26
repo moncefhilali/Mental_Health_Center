@@ -7,5 +7,5 @@ import { Treatment } from '../../interfaces/treatment.interface';
   styleUrls: ['./treatment.component.css'],
 })
 export class TreatmentComponent {
-  @Input() treatment?: Treatment;
+  @Input() treatments: Treatment[] = [];
 }

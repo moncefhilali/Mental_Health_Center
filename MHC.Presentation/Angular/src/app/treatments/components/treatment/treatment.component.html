@@ -1,5 +1,5 @@
 <div class="Treatment-Container">
-  <div class="Treatment">
+  <div *ngFor="let treatment of treatments" class="Treatment">
     <div class="Treatment-Upper">
       <div class="Treatment-Image">
         <img src="../assets/images/treatment_1.jpg" alt="" srcset="" />
@@ -9,12 +9,12 @@
       </div>
     </div>
     <div class="Treatment-Details">
-      <h2 class="Treatment-Title">{{ treatment?.topic }}</h2>
+      <h2 class="Treatment-Title">{{ treatment.topic }}</h2>
       <p class="Treatment-Text">
-        {{ treatment?.body }}
+        {{ treatment.body }}
       </p>
       <p class="Treatment-Date">
-        {{ treatment?.createdAt }}
+        {{ treatment.createdAt | date : "d MMM" }}
       </p>
     </div>
   </div>
