@@ -11,12 +11,12 @@ namespace MHC.UnitTests.Controllers
     public class TreatmentsControllerTests
     {
         private readonly Fixture _fixture;
-        private readonly TreatmentsController _tc;
+        private readonly TreatmentsController _controller;
         private readonly Mock<IMediator> _mediatorMock = new Mock<IMediator>();
         public TreatmentsControllerTests()
         {
             _fixture = new Fixture();
-            _tc = new TreatmentsController(_mediatorMock.Object);
+            _controller = new TreatmentsController(_mediatorMock.Object);
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace MHC.UnitTests.Controllers
             _mediatorMock.Setup(mediator => mediator.Send(It.IsAny<GetAllTreatmentsQuery>(), default)).ReturnsAsync(expectedTreatments);
 
             // Act
-            var result = await _tc.GetAllTreatments();
+            var result = await _controller.GetAllTreatments();
 
             // Assert
             var actionResult = Assert.IsType<OkObjectResult>(result);

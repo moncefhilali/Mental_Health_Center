@@ -11,12 +11,12 @@ namespace MHC.UnitTests.Controllers
     public class OurServicesControllerTests
     {
         private readonly Fixture _fixture;
-        private readonly OurServicesController _sc;
+        private readonly OurServicesController _controller;
         private readonly Mock<IMediator> _mediatorMock = new Mock<IMediator>();
         public OurServicesControllerTests()
         {
             _fixture = new Fixture();
-            _sc = new OurServicesController(_mediatorMock.Object);
+            _controller = new OurServicesController(_mediatorMock.Object);
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace MHC.UnitTests.Controllers
             _mediatorMock.Setup(mediator => mediator.Send(It.IsAny<GetAllOurServicesQuery>(), default)).ReturnsAsync(expectedServices);
 
             // Act
-            var result = await _sc.GetAllServices();
+            var result = await _controller.GetAllServices();
 
             // Assert
             var actionResult = Assert.IsType<OkObjectResult>(result);
