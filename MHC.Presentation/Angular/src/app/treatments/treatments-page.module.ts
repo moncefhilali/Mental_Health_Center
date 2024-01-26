@@ -4,6 +4,7 @@ import { TreatmentsPageComponent } from './treatments-page.component';
 import { TreatmentComponent } from './components/treatment/treatment.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { HeaderComponent } from '../shared/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,6 @@ import { HeaderComponent } from '../shared/header/header.component';
     IntroductionComponent,
     TreatmentComponent,
   ],
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, HttpClientModule],
 })
 export class TreatmentsPageModule {}

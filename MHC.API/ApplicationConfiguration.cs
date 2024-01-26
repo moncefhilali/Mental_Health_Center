@@ -50,6 +50,9 @@ namespace MHC.API
             // HttpClient
             services.AddHttpClient();
 
+            // Cors
+            services.AddCors();
+
             return services;
         }
     }

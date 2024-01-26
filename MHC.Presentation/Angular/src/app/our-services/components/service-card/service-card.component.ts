@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { OurService } from '../../interfaces/ourService.interface';
 
 @Component({
   selector: 'app-service-card',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ServiceCardComponent {
   value: number = 4;
+  @Input() ourservices: OurService[] = [];
 }
