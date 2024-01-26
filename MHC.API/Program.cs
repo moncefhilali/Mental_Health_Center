@@ -1,6 +1,8 @@
 using MHC.API;
 using MHC.Application;
 using MHC.Infrastructure;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using HealthChecks.UI.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,15 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Map Health Checks
+app.MapHealthChecks("/_health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+// Rate Limiter
+app.UseRateLimiter();
 
 app.UseAuthorization();
 

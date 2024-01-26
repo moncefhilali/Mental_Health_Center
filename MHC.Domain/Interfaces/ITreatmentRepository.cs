@@ -4,6 +4,6 @@ namespace MHC.Domain.Interfaces
 {
     public interface ITreatmentRepository : IGenericRepository<Treatment>
     {
-        Task<IEnumerable<Treatment>> GetAllIncludeAsync();
+        Task<List<Treatment>> GetAllIncludeAsync();
     }
 }

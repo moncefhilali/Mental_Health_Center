@@ -22,7 +22,7 @@ public partial class DBC : DbContext
 
     public virtual DbSet<Image> Images { get; set; }
 
-    public virtual DbSet<OurService> Services { get; set; }
+    public virtual DbSet<OurService> OurServices { get; set; }
 
     public virtual DbSet<Treatment> Treatments { get; set; }
 
@@ -63,11 +63,11 @@ public partial class DBC : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Clinics)
+            entity.HasOne(d => d.Image).WithMany(p => p.Clinics)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Clinic");
 
-            entity.HasOne(d => d.IdTypeNavigation).WithMany(p => p.Clinics)
+            entity.HasOne(d => d.ClinicType).WithMany(p => p.Clinics)
                 .HasForeignKey(d => d.IdType)
                 .HasConstraintName("fk_Type_Clinic");
         });
@@ -89,7 +89,7 @@ public partial class DBC : DbContext
                 .HasMaxLength(150)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Doctors)
+            entity.HasOne(d => d.Image).WithMany(p => p.Doctors)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Doctor");
         });
@@ -118,11 +118,11 @@ public partial class DBC : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.StartDate).HasColumnType("date");
 
-            entity.HasOne(d => d.IdCategoryNavigation).WithMany(p => p.Services)
+            entity.HasOne(d => d.Category).WithMany(p => p.Services)
                 .HasForeignKey(d => d.IdCategory)
                 .HasConstraintName("fk_Category_Service");
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Services)
+            entity.HasOne(d => d.Image).WithMany(p => p.Services)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Service");
         });
@@ -142,11 +142,11 @@ public partial class DBC : DbContext
                 .HasMaxLength(150)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdDoctorNavigation).WithMany(p => p.Treatments)
+            entity.HasOne(d => d.Doctor).WithMany(p => p.Treatments)
                 .HasForeignKey(d => d.IdDoctor)
                 .HasConstraintName("fk_Doctor_Treatment");
 
-            entity.HasOne(d => d.IdImageNavigation).WithMany(p => p.Treatments)
+            entity.HasOne(d => d.Image).WithMany(p => p.Treatments)
                 .HasForeignKey(d => d.IdImage)
                 .HasConstraintName("fk_Image_Treatment");
         });

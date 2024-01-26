@@ -19,7 +19,7 @@ public partial class OurService
 
     public Guid? IdImage { get; set; }
 
-    public virtual Category? IdCategoryNavigation { get; set; }
+    public virtual Category? Category { get; set; }
 
-    public virtual Image? IdImageNavigation { get; set; }
+    public virtual Image? Image { get; set; }
 }
