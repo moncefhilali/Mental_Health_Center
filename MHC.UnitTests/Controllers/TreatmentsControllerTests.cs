@@ -5,6 +5,7 @@ using MHC.Application.Treatments.Queries;
 using MHC.Application.Treatments.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Collections.Generic;
 
 namespace MHC.UnitTests.Controllers
 {

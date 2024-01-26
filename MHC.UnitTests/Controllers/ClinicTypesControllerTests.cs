@@ -5,6 +5,7 @@ using MHC.Application.ClinicTypes.Queries;
 using MHC.Application.ClinicTypes.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Collections.Generic;
 
 namespace MHC.UnitTests.Controllers
 {
