@@ -1,16 +1,10 @@
 ﻿using AutoFixture;
 using MediatR;
 using MHC.API.Controllers.v1;
-using MHC.Application.Clinics.ViewModel;
 using MHC.Application.ClinicTypes.Queries;
 using MHC.Application.ClinicTypes.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MHC.UnitTests.Controllers
 {

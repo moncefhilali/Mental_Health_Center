@@ -9,7 +9,5 @@ namespace MHC.Application.Doctors.ViewModel
         public string? Lastname { get; set; }
 
         public string? Specialty { get; set; }
-
-        public virtual Image? Image { get; set; }
     }
 }
