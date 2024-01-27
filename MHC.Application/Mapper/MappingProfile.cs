@@ -26,6 +26,7 @@ namespace MHC.Application.Mapper
             CreateMap<Treatment, TreatmentIncludeViewModel>().ReverseMap();
             CreateMap<Clinic, ClinicIncludeViewModel>().ReverseMap();
             CreateMap<Category, CategoryIncludeViewModel>().ReverseMap();
+            CreateMap<Doctor, DoctorIncludeViewModel>().ReverseMap();
         }
     }
 }
