@@ -28,8 +28,11 @@
           ></p-rating>
         </div>
         <div class="Clinic-Action">
-          <a [href]="'https://maps.app.goo.gl/' + clinic.link">
-            <img src="../../assets/icons/maps-and-flags.png" alt="" />
+          <a [href]="'https://maps.app.goo.gl/' + clinic.link" target="_blank">
+            <img
+              src="../../assets/icons/maps-and-flags.png"
+              [alt]="clinic.name"
+            />
           </a>
         </div>
       </div>
