@@ -11,7 +11,7 @@ namespace MHC.Application.Treatments.ViewModel
 
         public DateTime? CreatedAt { get; set; }
 
-        public virtual DoctorViewModel? Doctor { get; set; }
+        public virtual DoctorIncludeViewModel? Doctor { get; set; }
 
         public virtual ImageViewModel? Image { get; set; }
     }

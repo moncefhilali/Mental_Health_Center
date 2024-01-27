@@ -1,6 +1,8 @@
 .Treatment-Container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   width: 80%;
   margin-top: 30px;
   margin-left: auto;
@@ -14,10 +16,12 @@
   border-bottom-right-radius: 15px;
   border: 2px solid rgb(199, 199, 199);
   transition: all 0.5s;
+  margin-bottom: 20px;
 }
 
 .Treatment:hover {
   box-shadow: 1px 1px 15px rgb(199, 199, 199);
+  transform: scale(1.05);
 }
 
 .Treatment-Details {

@@ -2,10 +2,26 @@
   <div *ngFor="let treatment of treatments" class="Treatment">
     <div class="Treatment-Upper">
       <div class="Treatment-Image">
-        <img src="../assets/images/treatment_1.jpg" alt="" srcset="" />
+        <img
+          [src]="
+            '../../assets/images/' +
+            (treatment.image.path
+              ? treatment.image.path
+              : 'treatment_default.png')
+          "
+          [alt]="treatment.topic"
+        />
       </div>
       <div class="Treatment-Doctor">
-        <img src="../assets/images/doctor_1.png" alt="" srcset="" />
+        <img
+          [src]="
+            '../../assets/images/' +
+            (treatment.doctor.image.path
+              ? treatment.doctor.image.path
+              : 'clinic_default.png')
+          "
+          [alt]="treatment.doctor.firstname"
+        />
       </div>
     </div>
     <div class="Treatment-Details">

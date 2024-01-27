@@ -15,6 +15,7 @@ namespace MHC.Infrastructure.Repositories
         {
             return await _context.Clinics
                 .Include(c => c.ClinicType)
+                .Include(c => c.Image)
                 .ToListAsync();
         }
         

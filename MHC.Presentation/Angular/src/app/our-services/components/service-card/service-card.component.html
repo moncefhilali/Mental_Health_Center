@@ -1,31 +1,34 @@
-<div class="Service-Main">
+<div *ngFor="let category of categories" class="Service-Main">
   <div class="Service-Category">
-    <h1>{{ ourservices[0].category.name }}</h1>
+    <h1>{{ category.name }}</h1>
   </div>
   <div class="Service-Container">
-    <div *ngFor="let ourservice of ourservices" class="Service-Card">
+    <div *ngFor="let service of category.services" class="Service-Card">
       <div class="Service-Image">
         <img src="../assets/images/service_1.jpg" alt="" srcset="" />
       </div>
       <div class="Service-Details">
         <div class="Service-Title">
-          <h2>{{ ourservice.name }}</h2>
+          <h2>{{ service.name }}</h2>
         </div>
         <div class="Service-Reviews">
           <p-rating
-            [(ngModel)]="ourservice.reviews"
+            [(ngModel)]="service.reviews"
             [readonly]="true"
             [cancel]="false"
           ></p-rating>
         </div>
         <div class="Service-Enrollment">
-          <p>{{ ourservice.totalEnrollment }} enrolled</p>
+          <p>{{ service.totalEnrollment }} enrolled</p>
         </div>
         <div class="Service-Link">
-          <a href="">
+          <a
+            href="https://mywellness-ladhs.iqhealth.com/self-enroll/"
+            target="_blank"
+          >
             <p id="service-enroll">Enroll</p>
             <p id="service-date">
-              Starts {{ ourservice.startDate | date : "MMM dd" }}
+              Starts {{ service.startDate | date : "MMM dd" }}
             </p>
           </a>
         </div>

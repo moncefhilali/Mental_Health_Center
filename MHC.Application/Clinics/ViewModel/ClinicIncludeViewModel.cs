@@ -1,4 +1,5 @@
 ﻿using MHC.Application.ClinicTypes.ViewModel;
+using MHC.Application.Images.ViewModel;
 using MHC.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace MHC.Application.Clinics.ViewModel
 
         public string? Link { get; set; }
 
-        public virtual Image? Image { get; set; }
+        public virtual ImageViewModel? Image { get; set; }
 
         public virtual ClinicTypeViewModel? ClinicType { get; set; }
     }

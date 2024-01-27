@@ -6,6 +6,11 @@ export interface Treatment {
     firstname: string;
     lastname: string;
     specialty: string;
+    image: {
+      path: string;
+    };
   };
-  image: string | null;
+  image: {
+    path: string;
+  };
 }

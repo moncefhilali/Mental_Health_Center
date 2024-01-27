@@ -4,6 +4,6 @@ namespace MHC.Domain.Interfaces
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
-        // Additional Methods
+        Task<List<Category>> GetAllIncludeAsync();
     }
 }
