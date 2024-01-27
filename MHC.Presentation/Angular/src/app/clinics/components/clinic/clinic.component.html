@@ -6,9 +6,8 @@
         <div class="Clinic-Image">
           <img
             [src]="
-              clinic.image
-                ? clinic.image
-                : '../../assets/images/clinic_default.png'
+              '../../assets/images/' +
+              (clinic.image.path ? clinic.image.path : 'clinic_default.png')
             "
             [alt]="clinic.name"
           />

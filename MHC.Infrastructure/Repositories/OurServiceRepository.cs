@@ -14,6 +14,7 @@ namespace MHC.Infrastructure.Repositories
         {
             return await _context.OurServices
                 .Include(s => s.Category)
+                .Include(s => s.Image)
                 .ToListAsync();
         }
     }
